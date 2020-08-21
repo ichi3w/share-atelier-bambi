@@ -94,8 +94,8 @@ if ( ! function_exists( 'sab_setup' ) ) :
 		add_theme_support(
 			'custom-logo',
 			array(
-				'height'      => 500,
-				'width'       => 64,
+				'height'      => 32,
+				'width'       => 250,
 				'flex-width'  => true,
 				'flex-height' => true,
 			)
