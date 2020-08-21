@@ -112,7 +112,7 @@ add_action( 'after_setup_theme', 'sab_setup' );
  * @global int $content_width
  */
 function sab_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'sab_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'sab_content_width', 1200 );
 }
 add_action( 'after_setup_theme', 'sab_content_width', 0 );
 
