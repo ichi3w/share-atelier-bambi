@@ -627,29 +627,38 @@ textarea {
 /* Navigation
 --------------------------------------------- */
 .main-navigation {
+	position: absolute;
 	display: block;
-	width: 100%;
+	top: 0;
+	right: 0;
+}
+
+.main-navigation .menu-toggle {
+	position: absolute;
+	z-index: 100;
+	right: 8px;
+}
+
+.main-navigation .nav-menu {
+	position: relative;
+	padding-top: 48px;
+	top: 0;
+	right: 0;
+	transform: translateY(-100%);
+}
+
+.main-navigation.toggled .nav-menu {
+	transform: translateY(0);
 }
 
 .main-navigation ul {
-	display: none;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
 }
 
 .main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 100%;
-	left: -999em;
-	z-index: 99999;
-}
-
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
+	padding-left: 1em;
 }
 
 .main-navigation ul ul li:hover > ul,
@@ -677,20 +686,6 @@ textarea {
 }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: flex;
-	}
-}
-
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
@@ -719,7 +714,24 @@ textarea {
 /* Site Header
 --------------------------------------------- */
 .site-header {
+	position: sticky;
+	top: 0;
+	z-index: 100;
 	background-color: #00B4C7;
+}
+
+.site-header__inner {
+	position: relative;
+	margin: 0 auto;
+	max-width: 900px;
+}
+
+.site-branding {
+	display: flex;
+	align-items: center;
+	padding-left: 8px;
+	height: 48px;
+	z-index: 100;
 }
 
 /* Posts and pages
@@ -782,6 +794,10 @@ textarea {
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
 	display: inline-block;
+}
+
+.custom-logo-link img {
+	vertical-align: top;
 }
 
 /* Captions

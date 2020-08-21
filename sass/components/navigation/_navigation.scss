@@ -1,25 +1,35 @@
 .main-navigation {
+  position: absolute;
 	display: block;
-	width: 100%;
+  top: 0;
+  right: 0;
+
+  .menu-toggle {
+    position: absolute;
+    z-index: 100;
+    right: 8px;
+  }
+
+  .nav-menu {
+    position: relative;
+    padding-top: $height__site-header;
+    top: 0;
+    right: 0;
+    transform: translateY(-100%);
+  }
+  &.toggled {
+    .nav-menu {
+      transform: translateY(0);
+    }
+  }
 
 	ul {
-		display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 100%;
-			left: -999em;
-			z-index: 99999;
-
-			ul {
-				left: -999em;
-				top: 0;
-			}
+      padding-left: 1em;
 
 			li {
 
@@ -70,20 +80,11 @@
 }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
 
-@media screen and (min-width: 37.5em) {
 
-	.menu-toggle {
-		display: none;
-	}
 
-	.main-navigation ul {
-		display: flex;
-	}
+
+.main-navigation ul {
 }
 
 .comment-navigation,

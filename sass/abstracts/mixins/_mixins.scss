@@ -9,3 +9,10 @@
 @mixin column-width($numberColumns: 3) {
 	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
+
+// Media Query
+@mixin at-query ($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
