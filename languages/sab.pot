@@ -98,10 +98,6 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:49
-msgid "Primary Menu"
-msgstr ""
-
 #. translators: %s: post date.
 #: inc/template-tags.php:30
 msgctxt "post date"

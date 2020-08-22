@@ -630,62 +630,97 @@ textarea {
 	position: absolute;
 	display: block;
 	top: 0;
-	right: 0;
-}
-
-.main-navigation .menu-toggle {
-	position: absolute;
-	z-index: 100;
 	right: 8px;
 }
 
 .main-navigation .nav-menu {
 	position: relative;
-	padding-top: 48px;
 	top: 0;
 	right: 0;
+	padding: 16px 32px;
 	transform: translateY(-100%);
-}
-
-.main-navigation.toggled .nav-menu {
-	transform: translateY(0);
+	background-color: #00B4C7;
+	opacity: 0;
 }
 
 .main-navigation ul {
 	list-style: none;
 	margin: 0;
-	padding-left: 0;
-}
-
-.main-navigation ul ul {
-	padding-left: 1em;
-}
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	display: block;
-	left: auto;
-}
-
-.main-navigation ul ul a {
-	width: 200px;
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	left: auto;
-}
-
-.main-navigation li {
-	position: relative;
+	padding: 0;
 }
 
 .main-navigation a {
 	display: block;
+	line-height: 2;
 	text-decoration: none;
+	color: #fff;
 }
 
-/* Small menu. */
+.toggled.main-navigation .nav-menu {
+	opacity: 1;
+	transform: translateY(48px);
+}
+
+.menu-toggle {
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	right: 0;
+	height: 48px;
+	width: 48px;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+	background-color: transparent;
+}
+
+.menu-toggle:active, .menu-toggle:focus {
+	outline: none;
+}
+
+.menu-toggle::before, .menu-toggle__line, .menu-toggle::after {
+	content: '';
+	display: block;
+	position: absolute;
+	right: 12px;
+	margin: 0 auto;
+	background-color: #fff;
+	width: 24px;
+	height: 2px;
+	border-radius: 1px;
+}
+
+.menu-toggle::before {
+	top: 15px;
+}
+
+.menu-toggle__line {
+	top: 23px;
+}
+
+.menu-toggle::after {
+	top: 31px;
+}
+
+.toggled .menu-toggle::before, .toggled .menu-toggle__line, .toggled .menu-toggle::after {
+	right: 10px;
+	width: 28px;
+}
+
+.toggled .menu-toggle::before {
+	top: 23px;
+	transform: rotateZ(45deg);
+}
+
+.toggled .menu-toggle__line {
+	opacity: 0;
+}
+
+.toggled .menu-toggle::after {
+	top: 23px;
+	transform: rotateZ(-45deg);
+}
+
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
@@ -727,9 +762,11 @@ textarea {
 }
 
 .site-branding {
+	position: relative;
 	display: flex;
+	z-index: 500;
 	align-items: center;
-	padding-left: 8px;
+	padding-left: 16px;
 	height: 48px;
 	z-index: 100;
 }

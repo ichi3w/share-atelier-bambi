@@ -2,75 +2,30 @@
   position: absolute;
 	display: block;
   top: 0;
-  right: 0;
-
-  .menu-toggle {
-    position: absolute;
-    z-index: 100;
-    right: 8px;
-  }
+  right: 8px;
 
   .nav-menu {
     position: relative;
-    padding-top: $height__site-header;
     top: 0;
     right: 0;
+    padding: 16px 32px;
     transform: translateY(-100%);
-  }
-  &.toggled {
-    .nav-menu {
-      transform: translateY(0);
-    }
+    background-color: $color__background-header;
+    opacity: 0;
   }
 
 	ul {
 		list-style: none;
 		margin: 0;
-		padding-left: 0;
-
-		ul {
-      padding-left: 1em;
-
-			li {
-
-				&:hover > ul,
-				&.focus > ul {
-					display: block;
-					left: auto;
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
-
-	li {
-		position: relative;
-
-		&:hover > a,
-		&.focus > a {
-		}
+		padding: 0;
 	}
 
 	a {
-		display: block;
+    display: block;
+    line-height: 2;
 		text-decoration: none;
-	}
+    color: $color__background-body;
+  }
 
 	.current_page_item > a,
 	.current-menu-item > a,
@@ -79,12 +34,70 @@
 	}
 }
 
-/* Small menu. */
+.toggled.main-navigation {
+  .nav-menu {
+    opacity: 1;
+    transform: translateY($height__site-header);
+  }
+}
 
+.menu-toggle {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  height: $height__site-header;
+  width: $height__site-header;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  &:active,
+  &:focus {
+    outline: none;
+  }
+  &::before,
+  &__line,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 12px;
+    margin: 0 auto;
+    background-color: $color__background-body;
+    width: 24px;
+    height: 2px;
+    border-radius: 1px;
+  }
+  &::before {
+    top: 15px;
+  }
+  &__line {
+    top: 23px;
+  }
+  &::after {
+    top: 31px
+  }
+}
 
-
-
-.main-navigation ul {
+.toggled .menu-toggle {
+  &::before,
+  &__line,
+  &::after {
+    right: 10px;
+    width: 28px;
+  }
+  &::before {
+    top: 23px;
+    transform: rotateZ(45deg);
+  }
+  &__line {
+    opacity: 0;
+  }
+  &::after {
+    top: 23px;
+    transform: rotateZ(-45deg);
+  }
 }
 
 .comment-navigation,
