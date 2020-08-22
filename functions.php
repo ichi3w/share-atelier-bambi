@@ -178,3 +178,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+
+add_action( 'admin_head', function() {
+  echo '<style>.wp-block{max-width: 800px !important}</style>'."\n";
+});
