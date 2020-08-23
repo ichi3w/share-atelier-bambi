@@ -1,7 +1,7 @@
 <?php
 /**
- * The template for displaying front page
- *
+ * Template Name: FrontPageTemplate
+ * 
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package ShareAtelierBambi
@@ -16,7 +16,7 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content', 'front-page' );
+			get_template_part( 'template-parts/content', 'page-front' );
 
 		endwhile; // End of the loop.
 		?>
@@ -24,5 +24,4 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();
