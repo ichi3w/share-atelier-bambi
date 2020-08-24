@@ -14,10 +14,16 @@
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+  max-width: 1200px;
+  margin: 1.5em auto 0;
+  padding: 0 1rem;
 }
 
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.sub-title {
+  text-align: center;
 }

@@ -402,6 +402,10 @@ h6 {
 	clear: both;
 }
 
+h2 {
+	text-align: center;
+}
+
 p {
 	margin-bottom: 1.5em;
 }
@@ -803,12 +807,18 @@ textarea {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	max-width: 1200px;
+	margin: 1.5em auto 0;
+	padding: 0 1rem;
 }
 
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.sub-title {
+	text-align: center;
 }
 
 /* Front Page
@@ -821,54 +831,21 @@ textarea {
 	position: relative;
 	width: 100%;
 	height: 70vh;
+	padding-bottom: 2rem;
 }
 
-.front-top .catch-copy {
+.front-top .front-logo {
 	position: absolute;
 	display: block;
 	z-index: 90;
 	top: 50%;
 	left: 0;
 	right: 0;
-	width: 450px;
-	height: 200px;
+	width: auto;
+	height: 50%;
 	line-height: 200px;
 	margin: 0 auto;
-	text-align: center;
-	font-size: 32px;
 	transform: translateY(-50%);
-	background: radial-gradient(skyblue, transparent);
-}
-
-.front-top .front-image {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.front-top .front-subimage--one {
-	position: absolute;
-	display: block;
-	z-index: 30;
-	top: 0;
-	left: 30px;
-}
-
-.front-top .front-subimage--two {
-	position: absolute;
-	display: block;
-	z-index: 30;
-	top: 0;
-	left: 30%;
-}
-
-.front-top .front-subimage--three {
-	position: absolute;
-	display: block;
-	z-index: 30;
-	top: 0;
-	right: 0;
 }
 
 /* Comments

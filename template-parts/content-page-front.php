@@ -12,27 +12,12 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
   <div class="front-top">
-    <p class="catch-copy">表現者たちの秘密基地</p>
+    <?php echo do_shortcode('[smartslider3 slider="2"]'); ?>
     <img
-      class="front-image"
-      src="https://placehold.jp/1200x600.png"
+      class="front-logo"
+      src="<?php echo get_template_directory_uri(); ?>/my-templates/page-front-assets/front-logo.png"
       alt=""
-      srcset="https://placehold.jp/1200x600.png"
-    >
-    <img
-      class="front-subimage--one"
-      src="https://placehold.jp/300x300.png"
-      alt=""
-    >
-    <img
-      class="front-subimage--two"
-      src="https://placehold.jp/300x300.png"
-      alt=""
-    >
-    <img
-      class="front-subimage--three"
-      src="https://placehold.jp/300x300.png"
-      alt=""
+      srcset="<?php echo get_template_directory_uri(); ?>/my-templates/page-front-assets/front-logo.png"
     >
   </div>
 
