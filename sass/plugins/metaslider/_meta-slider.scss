@@ -1,0 +1,35 @@
+.front-top {
+  .metaslider {
+    height: 100%;
+    div {
+      height: 100%;
+    }
+    .flexslider{
+      height: 100%;
+      .slides {
+        height: 100%;
+        li {
+          height: 100%;
+        }
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .flex-control-nav {
+        bottom: 8px;
+        
+      }
+      .flex-control-paging {
+        li {
+          a {
+            background-color: rgba($color: #000, $alpha: .3);
+          }
+          a.flex-active {
+            background-color: rgba($color: #000, $alpha: .6);
+          }
+        }
+      }
+    }
+  }
+}

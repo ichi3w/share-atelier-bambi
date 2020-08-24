@@ -14,7 +14,7 @@
 .page-content,
 .entry-content,
 .entry-summary {
-  max-width: 1200px;
+  max-width: $size__content-max;
   margin: 1.5em auto 0;
   padding: 0 1rem;
 }

@@ -12,11 +12,12 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
   <div class="front-top">
-    <?php echo do_shortcode('[smartslider3 slider="2"]'); ?>
+    <?php  echo do_shortcode('[metaslider id="60"]'); ?>
+
     <img
       class="front-logo"
       src="<?php echo get_template_directory_uri(); ?>/my-templates/page-front-assets/front-logo.png"
-      alt=""
+      alt="シェアアトリエバンビロゴ"
       srcset="<?php echo get_template_directory_uri(); ?>/my-templates/page-front-assets/front-logo.png"
     >
   </div>
