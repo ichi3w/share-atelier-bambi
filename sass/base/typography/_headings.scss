@@ -4,10 +4,56 @@ h3,
 h4,
 h5,
 h6 {
-	clear: both;
+  clear: both;
+  line-height: 1.5;
 }
 
 h2 {
+  position: relative;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -.4em;
+    right: 0;
+    left: 0;
+    height: 3px;
+    width: 50%;
+    max-width: 300px;
+    margin: auto;
+    background-color: $color__site-main;
+  }
+}
+
+@mixin splash-effect {
+  content: "";
+  position: absolute;
+  display: block;
+  z-index: -1;
+  top: -.4em;
+  left: -.4em;
+  height: 2em;
+  width: 2.05em;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+h3 {
+  position: relative;
+  font-size: 1.5rem;
+  &.splash-blue::after {
+    @include splash-effect;
+    background-image: url(./assets/images/splash-blue.png);
+  }
+  &.splash-green::after {
+    @include splash-effect;
+    background-image: url(./assets/images/splash-green.png);
+  }
+  &.splash-yellow::after {
+    @include splash-effect;
+    background-image: url(./assets/images/splash-yellow.png);
+  }
 }

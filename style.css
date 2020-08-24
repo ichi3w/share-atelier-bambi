@@ -400,11 +400,74 @@ h4,
 h5,
 h6 {
 	clear: both;
+	line-height: 1.5;
 }
 
 h2 {
+	position: relative;
 	text-align: center;
-	font-size: 2rem;
+	font-size: 2.5rem;
+}
+
+h2::after {
+	content: "";
+	position: absolute;
+	display: block;
+	bottom: -.4em;
+	right: 0;
+	left: 0;
+	height: 3px;
+	width: 50%;
+	max-width: 300px;
+	margin: auto;
+	background-color: #00B4C7;
+}
+
+h3 {
+	position: relative;
+	font-size: 1.5rem;
+}
+
+h3.splash-blue::after {
+	content: "";
+	position: absolute;
+	display: block;
+	z-index: -1;
+	top: -.4em;
+	left: -.4em;
+	height: 2em;
+	width: 2.05em;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url(./assets/images/splash-blue.png);
+}
+
+h3.splash-green::after {
+	content: "";
+	position: absolute;
+	display: block;
+	z-index: -1;
+	top: -.4em;
+	left: -.4em;
+	height: 2em;
+	width: 2.05em;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url(./assets/images/splash-green.png);
+}
+
+h3.splash-yellow::after {
+	content: "";
+	position: absolute;
+	display: block;
+	z-index: -1;
+	top: -.4em;
+	left: -.4em;
+	height: 2em;
+	width: 2.05em;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url(./assets/images/splash-yellow.png);
 }
 
 p {
@@ -461,8 +524,12 @@ big {
 
 /* Elements
 --------------------------------------------- */
-body {
+:root {
 	font-size: 16px;
+}
+
+body {
+	font-size: 1rem;
 	background: #fff;
 }
 
@@ -820,6 +887,15 @@ textarea {
 
 .sub-title {
 	text-align: center;
+	font-size: 1.1rem;
+}
+
+.line-button.wp-block-button .wp-block-button__link {
+	padding-left: 3.6rem;
+	background-repeat: no-repeat;
+	background-size: 2.5rem;
+	background-position: .6rem center;
+	background-image: url(./assets/images/line-icon.png);
 }
 
 /* Front Page
@@ -831,8 +907,8 @@ textarea {
 .front-top {
 	position: relative;
 	width: 100%;
-	height: 60vh;
-	padding-bottom: 2rem;
+	height: calc(100vh - 128px);
+	overflow: hidden;
 }
 
 .front-top .front-logo {
@@ -842,8 +918,8 @@ textarea {
 	top: 50%;
 	left: 0;
 	right: 0;
-	width: auto;
-	height: 50%;
+	width: 70%;
+	height: auto;
 	line-height: 200px;
 	margin: 0 auto;
 	transform: translateY(-50%);
@@ -851,8 +927,55 @@ textarea {
 
 @media screen and (min-width: 780px) {
 	.front-top {
-		height: 70vh;
+		height: calc(100vh - 48px);
 	}
+	.front-top .front-logo {
+		width: auto;
+		height: 55%;
+	}
+}
+
+.front-catch-section h2::after {
+	content: none;
+}
+
+.front-catch-section p {
+	text-align: center;
+}
+
+@media screen and (min-width: 780px) {
+	.front-catch-section p {
+		text-align: center;
+	}
+}
+
+.front-planprice-section .wp-block-column {
+	margin-top: 1rem;
+	padding: 1rem;
+	border-radius: 1rem;
+}
+
+.front-planprice-section .wp-block-column:nth-of-type(1), .front-planprice-section .wp-block-column:nth-of-type(2) {
+	background-color: #def;
+}
+
+.front-planprice-section .wp-block-column:nth-of-type(3) {
+	background-color: #fed;
+}
+
+.front-planprice-section h3 {
+	text-align: center;
+	font-size: 2rem;
+}
+
+.front-planprice-section .front-catch-section-price {
+	text-align: center;
+	font-size: 2rem;
+}
+
+.front-planprice-section .front-catch-section-time {
+	text-align: center;
+	font-size: .9rem;
 }
 
 /* Comments

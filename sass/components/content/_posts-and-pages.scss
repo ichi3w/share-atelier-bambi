@@ -26,4 +26,18 @@
 
 .sub-title {
   text-align: center;
+  font-size: 1.1rem;
 }
+
+.line-button {
+  &.wp-block-button {
+    .wp-block-button__link {
+      padding-left: 3.6rem;
+      background-repeat: no-repeat;
+      background-size: 2.5rem;
+      background-position: .6rem center;
+      background-image: url(./assets/images/line-icon.png);
+    }
+  }
+}
+
