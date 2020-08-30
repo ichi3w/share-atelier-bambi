@@ -32,11 +32,18 @@
 .line-button {
   &.wp-block-button {
     .wp-block-button__link {
-      padding-left: 4rem;
+      padding: 0 16px 0 64px;
+      line-height: 48px;
+      border: none;
+      border-radius: 6px;
       background-repeat: no-repeat;
-      background-size: 3rem;
-      background-position: .6rem center;
-      background-image: url(./assets/images/line-icon.png);
+      background-size: 48px;
+      background-position: 8px center;
+      background-image: url(./assets/images/line-icon-r.png);
+      &:hover {
+        color: $color__text-reverse;
+        background-color: #00B900;
+      }
     }
   }
 }

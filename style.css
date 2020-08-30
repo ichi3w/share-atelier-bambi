@@ -848,12 +848,13 @@ textarea {
 /* Site Footer
 --------------------------------------------- */
 .site-footer {
+	height: 48px;
 	background-color: #00B4C7;
 }
 
 .copyright {
 	margin: 0 auto;
-	padding: 1em 0;
+	line-height: 48px;
 	text-align: center;
 	color: #fff;
 }
@@ -892,11 +893,19 @@ textarea {
 }
 
 .line-button.wp-block-button .wp-block-button__link {
-	padding-left: 4rem;
+	padding: 0 16px 0 64px;
+	line-height: 48px;
+	border: none;
+	border-radius: 6px;
 	background-repeat: no-repeat;
-	background-size: 3rem;
-	background-position: .6rem center;
-	background-image: url(./assets/images/line-icon.png);
+	background-size: 48px;
+	background-position: 8px center;
+	background-image: url(./assets/images/line-icon-r.png);
+}
+
+.line-button.wp-block-button .wp-block-button__link:hover {
+	color: #ffffff;
+	background-color: #00B900;
 }
 
 /* Front Page

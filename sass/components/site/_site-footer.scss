@@ -1,11 +1,11 @@
 .site-footer {
+  height: $height__site-header;
   background-color: $color__background-footer;
 }
 
 .copyright {
   margin: 0 auto;
-  padding: 1em 0;
+  line-height: $height__site-header;
   text-align: center;
   color: $color__background-body;
 }
-
