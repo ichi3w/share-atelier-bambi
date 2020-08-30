@@ -471,7 +471,8 @@ h3.splash-yellow::after {
 }
 
 p {
-	margin-bottom: 1.5em;
+	margin: 1em auto 1.5em;
+	max-width: 960px;
 }
 
 dfn,
@@ -891,9 +892,9 @@ textarea {
 }
 
 .line-button.wp-block-button .wp-block-button__link {
-	padding-left: 3.6rem;
+	padding-left: 4rem;
 	background-repeat: no-repeat;
-	background-size: 2.5rem;
+	background-size: 3rem;
 	background-position: .6rem center;
 	background-image: url(./assets/images/line-icon.png);
 }
@@ -949,33 +950,123 @@ textarea {
 	}
 }
 
-.front-planprice-section .wp-block-column {
+.front-planprice-columns {
+	justify-content: space-around;
+}
+
+.front-planprice-columns .wp-block-column {
 	margin-top: 1rem;
 	padding: 1rem;
 	border-radius: 1rem;
 }
 
-.front-planprice-section .wp-block-column:nth-of-type(1), .front-planprice-section .wp-block-column:nth-of-type(2) {
+.front-planprice-columns .wp-block-column:nth-of-type(1), .front-planprice-columns .wp-block-column:nth-of-type(2) {
 	background-color: #def;
 }
 
-.front-planprice-section .wp-block-column:nth-of-type(3) {
+.front-planprice-columns .wp-block-column:nth-of-type(3) {
 	background-color: #fed;
 }
 
-.front-planprice-section h3 {
+.front-planprice-columns h3 {
+	margin: .4em 0 0;
 	text-align: center;
 	font-size: 2rem;
 }
 
-.front-planprice-section .front-catch-section-price {
-	text-align: center;
-	font-size: 2rem;
-}
-
-.front-planprice-section .front-catch-section-time {
+.front-planprice-columns .front-planprice-time {
+	margin: 0;
 	text-align: center;
 	font-size: .9rem;
+}
+
+.front-planprice-columns .front-planprice-price {
+	margin: .2em 0;
+	text-align: center;
+	font-size: 2rem;
+}
+
+.front-planprice-columns .front-planprice-price span {
+	font-size: 1.2rem;
+}
+
+.front-service-icons {
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 960px;
+}
+
+.front-service-icons .wp-block-image {
+	display: flex;
+	align-items: center;
+}
+
+.front-service-icons .wp-block-image img {
+	display: block;
+}
+
+.front-service-icons .wp-block-image figcaption {
+	margin: 0 0 0 1em;
+}
+
+.front-schedule-calendar iframe {
+	display: block;
+	margin: 0 auto;
+}
+
+.front-schedule-blue {
+	position: relative;
+	padding-left: 2em;
+}
+
+.front-schedule-blue::before {
+	content: '';
+	position: absolute;
+	display: block;
+	top: .3em;
+	left: 0;
+	width: 1.4em;
+	height: 1.4em;
+	border-radius: .2em;
+	background-color: #def;
+}
+
+.front-schedule-orange {
+	position: relative;
+	padding-left: 2em;
+}
+
+.front-schedule-orange::before {
+	content: '';
+	position: absolute;
+	display: block;
+	top: .3em;
+	left: 0;
+	width: 1.4em;
+	height: 1.4em;
+	border-radius: .2em;
+	background-color: #eed;
+}
+
+.front-sponser-container {
+	margin: 0 auto;
+}
+
+.front-sponser-container .wp-block-group__inner-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.front-sponser-container .wp-block-group__inner-container .wp-block-image {
+	margin: 0 .5rem 1.5rem;
+}
+
+@media screen and (min-width: 480px) {
+	.front-sponser-container .wp-block-group__inner-container .wp-block-image {
+		margin: 0 2rem 1.5rem;
+	}
 }
 
 /* Comments

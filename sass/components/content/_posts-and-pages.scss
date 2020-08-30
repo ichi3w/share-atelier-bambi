@@ -14,7 +14,7 @@
 .page-content,
 .entry-content,
 .entry-summary {
-  max-width: $size__content-max;
+  max-width: $size__site-max;
   margin: 1.5em auto 0;
   padding: 0 1rem;
 }
@@ -32,9 +32,9 @@
 .line-button {
   &.wp-block-button {
     .wp-block-button__link {
-      padding-left: 3.6rem;
+      padding-left: 4rem;
       background-repeat: no-repeat;
-      background-size: 2.5rem;
+      background-size: 3rem;
       background-position: .6rem center;
       background-image: url(./assets/images/line-icon.png);
     }

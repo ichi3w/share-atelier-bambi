@@ -53,7 +53,9 @@
   }
 }
 
-.front-planprice-section {
+.front-planprice-columns {
+  justify-content: space-around;
+
   .wp-block-column {
     margin-top: 1rem;
     padding: 1rem;
@@ -68,15 +70,92 @@
     }
   }
   h3 {
+    margin: .4em 0 0;
     text-align: center;
     font-size: 2rem;
   }
-  .front-catch-section-price {
-    text-align: center;
-    font-size: 2rem;
-  }
-  .front-catch-section-time {
+  .front-planprice-time {
+    margin: 0;
     text-align: center;
     font-size: .9rem;
+  }
+  .front-planprice-price {
+    margin: .2em 0;
+    text-align: center;
+    font-size: 2rem;
+    span {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.front-service-icons {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: $size__content-max;
+  .wp-block-image {
+    display: flex;
+    align-items: center;
+    img {
+      display: block;
+    }
+    figcaption {
+      margin: 0 0 0 1em;
+    }
+  }
+}
+
+.front-schedule-calendar {
+  iframe {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@mixin front-schedule-info ($fsi_color) {
+  position: relative;
+  padding-left: 2em;
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: .3em;
+    left: 0;
+    width: 1.4em;
+    height: 1.4em;
+    border-radius: .2em;
+    background-color: $fsi_color;
+  }
+}
+
+.front-schedule-blue {
+  @include front-schedule-info(#def);
+}
+.front-schedule-orange {
+  @include front-schedule-info(#eed);
+}
+
+.front-sponser-container {
+  margin: 0 auto;
+
+  .wp-block-group__inner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .wp-block-image {
+      margin: 0 .5rem 1.5rem;
+    }
+  }
+}
+
+@include at-query($breakpoint__sp) {
+  .front-sponser-container {
+    .wp-block-group__inner-container {
+      .wp-block-image {
+        margin: 0 2rem 1.5rem;
+      }
+    }
   }
 }
