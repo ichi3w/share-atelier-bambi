@@ -406,7 +406,7 @@ h6 {
 
 h2 {
 	position: relative;
-	margin: .8em auto .6em;
+	margin: .8em auto .4em;
 	text-align: center;
 	font-size: 2.5rem;
 }
@@ -415,7 +415,7 @@ h2::after {
 	content: "";
 	position: absolute;
 	display: block;
-	bottom: -.3em;
+	bottom: -.25em;
 	right: 0;
 	left: 0;
 	height: 3px;
@@ -898,7 +898,7 @@ textarea {
 
 .sub-title {
 	text-align: center;
-	font-size: 1.1rem;
+	font-size: 1.25rem;
 	margin-bottom: 1.2em;
 }
 
