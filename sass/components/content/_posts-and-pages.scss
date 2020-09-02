@@ -44,7 +44,7 @@
       background-repeat: no-repeat;
       background-size: 32px;
       background-position: left 8px center;
-      background-image: url(./assets/images/line-icon-r.png);
+      background-image: url(./images/line-icon-r.png);
       color: $color__text-main;
       transition: color .3s .1s, background-color .3s;
       &:hover {
@@ -54,4 +54,3 @@
     }
   }
 }
-

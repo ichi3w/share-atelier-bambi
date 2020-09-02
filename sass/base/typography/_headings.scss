@@ -47,14 +47,14 @@ h3 {
   font-size: 1.5rem;
   &.splash-blue::after {
     @include splash-effect;
-    background-image: url(./assets/images/splash-blue.png);
+    background-image: url(./images/splash-blue.png);
   }
   &.splash-green::after {
     @include splash-effect;
-    background-image: url(./assets/images/splash-green.png);
+    background-image: url(./images/splash-green.png);
   }
   &.splash-yellow::after {
     @include splash-effect;
-    background-image: url(./assets/images/splash-yellow.png);
+    background-image: url(./images/splash-yellow.png);
   }
 }

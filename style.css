@@ -441,7 +441,7 @@ h3.splash-blue::after {
 	width: 3.4em;
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-image: url(./assets/images/splash-blue.png);
+	background-image: url(./images/splash-blue.png);
 }
 
 h3.splash-green::after {
@@ -455,7 +455,7 @@ h3.splash-green::after {
 	width: 3.4em;
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-image: url(./assets/images/splash-green.png);
+	background-image: url(./images/splash-green.png);
 }
 
 h3.splash-yellow::after {
@@ -469,7 +469,7 @@ h3.splash-yellow::after {
 	width: 3.4em;
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-image: url(./assets/images/splash-yellow.png);
+	background-image: url(./images/splash-yellow.png);
 }
 
 p {
@@ -914,7 +914,7 @@ textarea {
 	background-repeat: no-repeat;
 	background-size: 32px;
 	background-position: left 8px center;
-	background-image: url(./assets/images/line-icon-r.png);
+	background-image: url(./images/line-icon-r.png);
 	color: #404040;
 	transition: color .3s .1s, background-color .3s;
 }
