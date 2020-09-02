@@ -35,7 +35,7 @@
 }
 
 .front-catch-section {
-  margin: 2rem auto;
+  margin: 3rem auto;
   h2 {
     margin-bottom: .5em;
     &::after {
@@ -43,6 +43,7 @@
     }
   }
   p {
+    line-height: 1.85;
     text-align: center;
   }
 }
@@ -56,7 +57,8 @@
 }
 
 .front-goodpoint-columns {
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem;
+  max-width: $size__content-max;
   .wp-block-image {
     margin: .5em auto;
   }
@@ -76,7 +78,7 @@
 
   .wp-block-column {
     margin-top: 1rem;
-    padding: 1rem;
+    padding: 1rem 1.5rem 1.3rem;
     border-radius: 1rem;
 
     &:nth-of-type(1) {
@@ -85,10 +87,10 @@
 
     &:nth-of-type(1),
     &:nth-of-type(2) {
-      background-color: #def;
+      border: 3px solid $color__site-sub-blue;
     }
     &:nth-of-type(3) {
-      background-color: #fed;
+      border: 3px solid $color__site-sub-orange;
     }
   }
   h3 {
@@ -169,10 +171,11 @@
 }
 
 .front-schedule-blue {
-  @include front-schedule-info(#def);
+  @include front-schedule-info($color__site-sub-blue);
+  margin-top: 3em;
 }
 .front-schedule-orange {
-  @include front-schedule-info(#eed);
+  @include front-schedule-info($color__site-sub-orange);
 }
 
 .front-sponser-container {
@@ -185,7 +188,9 @@
     flex-wrap: wrap;
 
     .wp-block-image {
-      margin: 0 .5rem 1.5rem;
+      margin: 0 .5rem 3rem;
+      flex-basis: 100%;
+      text-align: center;
     }
   }
 }
@@ -195,7 +200,13 @@
     .wp-block-group__inner-container {
       .wp-block-image {
         margin: 0 2rem 1.5rem;
+        flex-basis: auto;
       }
     }
   }
+}
+
+.front-access-columns {
+  max-width: $size__content-max;
+  margin: 0 auto 1.5rem;
 }

@@ -27,7 +27,7 @@
 .sub-title {
   text-align: center;
   font-size: 1.25rem;
-  margin-bottom: 1.2em;
+  margin-bottom: 2.5em;
 }
 
 .small-text {
@@ -35,6 +35,8 @@
 }
 
 .line-button {
+  margin-top: 1.5em;
+  margin-bottom: 1.2em;
   &.wp-block-button {
     .wp-block-button__link {
       padding: 0 16px 0 48px;
