@@ -11,8 +11,14 @@
 }
 
 // Media Query
-@mixin at-query ($breakpoint: $breakpoint__tab) {
+@mixin at-query-min ($breakpoint: $breakpoint__tab) {
   @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin at-query-max ($breakpoint: $breakpoint__tab) {
+  @media screen and (max-width: $breakpoint) {
     @content;
   }
 }

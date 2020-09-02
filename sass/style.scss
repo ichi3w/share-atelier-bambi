@@ -46,7 +46,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Jetpack infinite scroll
 # Utilities
 	- Accessibility
-	- Alignments
+  - Alignments
+  - WP Blocks
 
 --------------------------------------------------------------*/
 
@@ -104,3 +105,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* Alignments
 --------------------------------------------- */
 @import "utilities/alignments";
+
+/* WordPress Blocks
+--------------------------------------------- */
+@import "utilities/wp-blocks";

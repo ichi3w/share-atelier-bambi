@@ -23,7 +23,7 @@
   }
 }
 
-@include at-query($breakpoint__tab) {
+@include at-query-min($breakpoint__tab) {
   .front-top {
     height: calc(100vh - 48px);;
 
@@ -37,7 +37,7 @@
 .front-catch-section {
   margin: 3rem auto;
   h2 {
-    margin-bottom: .5em;
+    margin: .5em auto;
     &::after {
       content: none;
     }
@@ -48,7 +48,7 @@
   }
 }
 
-@include at-query($breakpoint__tab) {
+@include at-query-min($breakpoint__tab) {
   .front-catch-section {
     p {
       text-align: center;
@@ -64,7 +64,7 @@
   }
 }
 
-@include at-query($breakpoint__tab) {
+@include at-query-min($breakpoint__tab) {
   .front-goodpoint-columns {
     margin-bottom: 1.5rem;
     .wp-block-image {
@@ -123,7 +123,7 @@
   }
 }
 
-@include at-query($breakpoint__tab) {
+@include at-query-min($breakpoint__tab) {
   .front-planprice-columns {
     .wp-block-column {
       margin-top: 0;
@@ -195,7 +195,7 @@
   }
 }
 
-@include at-query($breakpoint__sp) {
+@include at-query-min($breakpoint__sp) {
   .front-sponser-container {
     .wp-block-group__inner-container {
       .wp-block-image {

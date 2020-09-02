@@ -1,0 +1,5 @@
+@include at-query-max($wp__breakpoint-max599) {
+  .columns-sp-r {
+    flex-direction: column-reverse;
+  }
+}
