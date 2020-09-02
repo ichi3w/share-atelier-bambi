@@ -1,5 +1,11 @@
 :root {
-  font-size: 16px;
+  font-size: $font__main-size-sp;
+}
+
+@include at-query($breakpoint__tab){
+  :root {
+    font-size: $font__main-size-pc;
+  }
 }
 
 body {

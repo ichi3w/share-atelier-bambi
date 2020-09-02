@@ -405,6 +405,7 @@ h6 {
 
 h2 {
 	position: relative;
+	margin: .8em auto .6em;
 	text-align: center;
 	font-size: 2.5rem;
 }
@@ -413,11 +414,11 @@ h2::after {
 	content: "";
 	position: absolute;
 	display: block;
-	bottom: -.4em;
+	bottom: -.3em;
 	right: 0;
 	left: 0;
 	height: 3px;
-	width: 50%;
+	width: 60%;
 	max-width: 300px;
 	margin: auto;
 	background-color: #00B4C7;
@@ -433,10 +434,10 @@ h3.splash-blue::after {
 	position: absolute;
 	display: block;
 	z-index: -1;
-	top: -.4em;
-	left: -.4em;
-	height: 2em;
-	width: 2.05em;
+	top: -1em;
+	left: -.7em;
+	height: 3em;
+	width: 3.4em;
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-image: url(./assets/images/splash-blue.png);
@@ -447,10 +448,10 @@ h3.splash-green::after {
 	position: absolute;
 	display: block;
 	z-index: -1;
-	top: -.4em;
-	left: -.4em;
-	height: 2em;
-	width: 2.05em;
+	top: -1em;
+	left: -.7em;
+	height: 3em;
+	width: 3.4em;
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-image: url(./assets/images/splash-green.png);
@@ -461,10 +462,10 @@ h3.splash-yellow::after {
 	position: absolute;
 	display: block;
 	z-index: -1;
-	top: -.4em;
-	left: -.4em;
-	height: 2em;
-	width: 2.05em;
+	top: -1em;
+	left: -.7em;
+	height: 3em;
+	width: 3.4em;
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-image: url(./assets/images/splash-yellow.png);
@@ -526,7 +527,13 @@ big {
 /* Elements
 --------------------------------------------- */
 :root {
-	font-size: 16px;
+	font-size: 15px;
+}
+
+@media screen and (min-width: 780px) {
+	:root {
+		font-size: 17px;
+	}
 }
 
 body {
@@ -576,6 +583,7 @@ object {
 }
 
 img {
+	vertical-align: top;
 	height: auto;
 	max-width: 100%;
 }
@@ -890,17 +898,24 @@ textarea {
 .sub-title {
 	text-align: center;
 	font-size: 1.1rem;
+	margin-bottom: 1.2em;
+}
+
+.small-text {
+	font-size: .9rem;
 }
 
 .line-button.wp-block-button .wp-block-button__link {
-	padding: 0 16px 0 64px;
+	padding: 0 16px 0 48px;
 	line-height: 48px;
-	border: none;
-	border-radius: 6px;
+	border: 2px solid #00B900;
+	border-radius: 24px;
 	background-repeat: no-repeat;
-	background-size: 48px;
-	background-position: 8px center;
+	background-size: 32px;
+	background-position: left 8px center;
 	background-image: url(./assets/images/line-icon-r.png);
+	color: #404040;
+	transition: color .3s .1s, background-color .3s;
 }
 
 .line-button.wp-block-button .wp-block-button__link:hover {
@@ -945,6 +960,14 @@ textarea {
 	}
 }
 
+.front-catch-section {
+	margin: 2rem auto;
+}
+
+.front-catch-section h2 {
+	margin-bottom: .5em;
+}
+
 .front-catch-section h2::after {
 	content: none;
 }
@@ -959,6 +982,23 @@ textarea {
 	}
 }
 
+.front-goodpoint-columns {
+	margin-bottom: 1rem;
+}
+
+.front-goodpoint-columns .wp-block-image {
+	margin: .5em auto;
+}
+
+@media screen and (min-width: 780px) {
+	.front-goodpoint-columns {
+		margin-bottom: 1.5rem;
+	}
+	.front-goodpoint-columns .wp-block-image {
+		margin: 1em 0;
+	}
+}
+
 .front-planprice-columns {
 	justify-content: space-around;
 }
@@ -967,6 +1007,10 @@ textarea {
 	margin-top: 1rem;
 	padding: 1rem;
 	border-radius: 1rem;
+}
+
+.front-planprice-columns .wp-block-column:nth-of-type(1) {
+	margin-top: 0;
 }
 
 .front-planprice-columns .wp-block-column:nth-of-type(1), .front-planprice-columns .wp-block-column:nth-of-type(2) {
@@ -978,7 +1022,7 @@ textarea {
 }
 
 .front-planprice-columns h3 {
-	margin: .4em 0 0;
+	margin: 0;
 	text-align: center;
 	font-size: 2rem;
 }
@@ -990,13 +1034,29 @@ textarea {
 }
 
 .front-planprice-columns .front-planprice-price {
-	margin: .2em 0;
+	margin: 0;
 	text-align: center;
-	font-size: 2rem;
+	font-size: 2.2rem;
+	line-height: 1.5;
 }
 
 .front-planprice-columns .front-planprice-price span {
-	font-size: 1.2rem;
+	font-size: .6em;
+}
+
+.front-planprice-columns p span {
+	font-size: .9rem;
+}
+
+.front-planprice-columns .front-planprice-option {
+	margin-bottom: 0;
+	font-size: .9rem;
+}
+
+@media screen and (min-width: 780px) {
+	.front-planprice-columns .wp-block-column {
+		margin-top: 0;
+	}
 }
 
 .front-service-icons {
@@ -1112,10 +1172,6 @@ textarea {
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
 	display: inline-block;
-}
-
-.custom-logo-link img {
-	vertical-align: top;
 }
 
 /* Captions

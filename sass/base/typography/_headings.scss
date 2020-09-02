@@ -10,6 +10,7 @@ h6 {
 
 h2 {
   position: relative;
+  margin: .8em auto .6em;
   text-align: center;
   font-size: 2.5rem;
 
@@ -17,11 +18,11 @@ h2 {
     content: "";
     position: absolute;
     display: block;
-    bottom: -.4em;
+    bottom: -.3em;
     right: 0;
     left: 0;
     height: 3px;
-    width: 50%;
+    width: 60%;
     max-width: 300px;
     margin: auto;
     background-color: $color__site-main;
@@ -33,14 +34,14 @@ h2 {
   position: absolute;
   display: block;
   z-index: -1;
-  top: -.4em;
-  left: -.4em;
-  height: 2em;
-  width: 2.05em;
+  top: -1em;
+  left: -.7em;
+  height: 3em;
+  width: 3.4em;
   background-size: contain;
   background-repeat: no-repeat;
 }
-
+  
 h3 {
   position: relative;
   font-size: 1.5rem;

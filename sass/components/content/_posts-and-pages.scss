@@ -27,19 +27,26 @@
 .sub-title {
   text-align: center;
   font-size: 1.1rem;
+  margin-bottom: 1.2em;
+}
+
+.small-text {
+  font-size: .9rem;
 }
 
 .line-button {
   &.wp-block-button {
     .wp-block-button__link {
-      padding: 0 16px 0 64px;
+      padding: 0 16px 0 48px;
       line-height: 48px;
-      border: none;
-      border-radius: 6px;
+      border: 2px solid #00B900;
+      border-radius: 24px;
       background-repeat: no-repeat;
-      background-size: 48px;
-      background-position: 8px center;
+      background-size: 32px;
+      background-position: left 8px center;
       background-image: url(./assets/images/line-icon-r.png);
+      color: $color__text-main;
+      transition: color .3s .1s, background-color .3s;
       &:hover {
         color: $color__text-reverse;
         background-color: #00B900;
