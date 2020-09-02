@@ -77,7 +77,7 @@
   justify-content: space-around;
 
   .wp-block-column {
-    margin-top: 1rem;
+    margin-bottom: 1rem;
     padding: 1rem 1.5rem 1.3rem;
     border-radius: 1rem;
 
@@ -121,8 +121,7 @@
 }
 
 .front-service-icons {
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto 1.8rem;
   max-width: $size__content-max;
   .wp-block-image {
     display: flex;
@@ -205,3 +204,4 @@
   max-width: $size__content-max;
   margin: 0 auto 1.5rem;
 }
+
