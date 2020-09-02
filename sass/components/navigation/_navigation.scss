@@ -22,7 +22,7 @@
 
 	a {
     display: block;
-    line-height: 2;
+    line-height: $font__line-height-body;
 		text-decoration: none;
     color: $color__background-body;
   }
