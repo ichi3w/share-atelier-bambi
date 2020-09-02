@@ -71,18 +71,6 @@ if ( ! function_exists( 'sab_setup' ) ) :
 			)
 		);
 
-		// Set up the WordPress core custom background feature.
-		add_theme_support(
-			'custom-background',
-			apply_filters(
-				'sab_custom_background_args',
-				array(
-					'default-color' => 'ffffff',
-					'default-image' => '',
-				)
-			)
-		);
-
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -143,7 +131,8 @@ function sab_scripts() {
 	wp_enqueue_style( 'sab-style', get_stylesheet_uri(), array(), SAB_VERSION );
 	wp_style_add_data( 'sab-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'sab-navigation', get_template_directory_uri() . '/js/navigation.js', array(), SAB_VERSION, true );
+  wp_enqueue_script( 'sab-navigation', get_template_directory_uri() . '/js/navigation.js', array(), SAB_VERSION, true );
+  wp_enqueue_script( 'sab-script', get_template_directory_uri() . '/js/script.js', array( 'jquery' ), SAB_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -177,8 +166,6 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
-
 
 add_action( 'admin_head', function() {
   echo '<style>.wp-block{max-width: 800px !important}</style>'."\n";
