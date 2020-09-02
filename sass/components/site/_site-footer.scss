@@ -1,11 +1,21 @@
 .site-footer {
-  height: $height__site-header;
+  padding: 1rem 0;
   background-color: $color__background-footer;
+
+  .twitter-logo {
+    display: block;
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+    background-color: $color__background-body;
+    border-radius: 24px;
+  }
 }
 
 .copyright {
   margin: 0 auto;
-  line-height: $height__site-header;
+  padding-top: 1rem;
+  line-height: 1.5;
   text-align: center;
   color: $color__background-body;
 }

@@ -12,7 +12,15 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<p class="copyright">
+    <a class="twitter-logo" href="https://twitter.com/Bambi_0827" target="_blank" rel="noopener noreferrer">
+      <img
+        loading="lazy"
+        width="32"
+        height="32"
+        src="<?php echo get_template_directory_uri(); ?>/images/twitter-logo.png"
+        alt="ツイッターへのリンク">
+    </a>
+    <p class="copyright">
       ©︎ 2020 Share Atelier Bambi
 		</p>
 	</footer><!-- #colophon -->
