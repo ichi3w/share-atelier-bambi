@@ -87,7 +87,9 @@ if ( ! function_exists( 'sab_setup' ) ) :
 				'flex-width'  => true,
 				'flex-height' => true,
 			)
-		);
+    );
+    
+    add_theme_support( 'editor-styles' );
 	}
 endif;
 add_action( 'after_setup_theme', 'sab_setup' );
@@ -167,6 +169,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-add_action( 'admin_head', function() {
-  echo '<style>.wp-block{max-width: 800px !important}</style>'."\n";
-});
+/**
+ * Load My gutenberg styles
+ */
+add_action( 'admin_init', 'enqueue_gutenberg_styles' );
+function enqueue_gutenberg_styles() {
+  add_editor_style( 'style-gutenberg.css' );
+}
