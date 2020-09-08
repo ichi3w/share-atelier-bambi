@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
   <div class="front-top">
-    <?php  echo do_shortcode('[metaslider id="60"]'); ?>
+    <?php echo do_shortcode('[metaslider title="FrontTopSlider"]'); ?>
 
     <img
       class="front-logo"
