@@ -16,7 +16,7 @@
 .entry-summary {
   max-width: $size__site-max;
   margin: 1.5em auto 0;
-  padding: 0 1rem;
+  padding: 0 1.4rem;
 }
 
 .page-links {
@@ -104,11 +104,12 @@
       background-size: 32px;
       background-position: left 8px center;
       background-image: url(./images/line-icon-r.png);
-      color: $color__text-main;
       transition: color .3s .1s, background-color .3s;
+      color: $color__text-reverse;
+      background-color: #00B900;
       &:hover {
-        color: $color__text-reverse;
-        background-color: #00B900;
+        color: $color__text-main;
+        background-color: transparent;
       }
     }
   }

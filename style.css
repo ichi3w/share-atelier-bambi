@@ -900,7 +900,7 @@ textarea {
 .entry-summary {
 	max-width: 1200px;
 	margin: 1.5em auto 0;
-	padding: 0 1rem;
+	padding: 0 1.4rem;
 }
 
 .page-links {
@@ -989,13 +989,14 @@ textarea {
 	background-size: 32px;
 	background-position: left 8px center;
 	background-image: url(./images/line-icon-r.png);
-	color: #404040;
 	transition: color .3s .1s, background-color .3s;
+	color: #ffffff;
+	background-color: #00B900;
 }
 
 .line-button.wp-block-button .wp-block-button__link:hover {
-	color: #ffffff;
-	background-color: #00B900;
+	color: #404040;
+	background-color: transparent;
 }
 
 .line-button.effective {
@@ -1100,7 +1101,6 @@ textarea {
 
 .front-goodpoint-columns {
 	margin: 0 auto 1rem;
-	max-width: 960px;
 }
 
 .front-goodpoint-columns .wp-block-image {
@@ -1260,6 +1260,7 @@ textarea {
 
 .front-service-icons .wp-block-image {
 	display: flex;
+	padding-left: 1.4rem;
 	align-items: center;
 }
 

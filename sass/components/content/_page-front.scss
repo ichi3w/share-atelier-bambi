@@ -88,7 +88,6 @@
 
 .front-goodpoint-columns {
   margin: 0 auto 1rem;
-  max-width: $size__content-max;
   .wp-block-image {
     margin: .5em auto;
   }
@@ -237,6 +236,7 @@
   max-width: $size__content-max;
   .wp-block-image {
     display: flex;
+    padding-left: 1.4rem;
     align-items: center;
     img {
       display: block;
