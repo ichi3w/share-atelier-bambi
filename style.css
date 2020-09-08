@@ -912,14 +912,67 @@ textarea {
 	margin: 2em auto .4em;
 }
 
+.pair-h2 h2::after {
+	content: "";
+	position: absolute;
+	display: block;
+	bottom: -.25em;
+	right: 0;
+	left: 0;
+	height: 3px;
+	width: 60%;
+	max-width: 300px;
+	margin: auto;
+	background-color: #00B4C7;
+}
+
 .pair-h2 p {
 	text-align: center;
 	font-size: 1.25rem;
 	margin-bottom: 2.4em;
 }
 
+.pair-h2.effective h2 {
+	transform: scaleX(0);
+	transition: transform .3s;
+}
+
+.pair-h2.effective h2::after {
+	transform: scaleX(0);
+	transform-origin: left center;
+	transition: transform .6s .4s;
+}
+
+.pair-h2.effective p {
+	transform: scaleX(0);
+	transition: transform .3s .3s;
+}
+
+.pair-h2.effective.is-active h2 {
+	transform: scaleX(1);
+}
+
+.pair-h2.effective.is-active h2::after {
+	transform: scaleX(1);
+}
+
+.pair-h2.effective.is-active p {
+	transform: scaleX(1);
+}
+
 .small-text {
 	font-size: .9rem;
+}
+
+.small-text.effective {
+	opacity: 0;
+	transform: translateY(15px);
+	transition: opacity .6s, transform .6s;
+}
+
+.small-text.effective.is-active {
+	opacity: 1;
+	transform: translateY(0);
 }
 
 .line-button {
@@ -945,6 +998,15 @@ textarea {
 	background-color: #00B900;
 }
 
+.line-button.effective {
+	transform: scale(0);
+	transition: transform 1s;
+}
+
+.line-button.effective.is-active {
+	transform: scaleY(1);
+}
+
 /* Front Page
 --------------------------------------------- */
 .home .site-main {
@@ -954,7 +1016,7 @@ textarea {
 .front-top {
 	position: relative;
 	width: 100%;
-	height: calc(100vh - 128px);
+	height: calc(100vh - 96px);
 	overflow: hidden;
 }
 
@@ -999,6 +1061,37 @@ textarea {
 	text-align: center;
 }
 
+.front-catch-section.effective .wp-block-column:first-child {
+	transform: scale(0);
+	transition: transform .5s;
+}
+
+.front-catch-section.effective p {
+	opacity: 0;
+	transform: translateY(15px);
+}
+
+.front-catch-section.effective p:nth-of-type(1) {
+	transition: opacity .5s .5s, transform .5s .5s;
+}
+
+.front-catch-section.effective p:nth-of-type(2) {
+	transition: opacity .5s .7s, transform .5s .7s;
+}
+
+.front-catch-section.effective p:nth-of-type(3) {
+	transition: opacity .5s .9s, transform .5s .9s;
+}
+
+.front-catch-section.effective.is-active .wp-block-column:first-child {
+	transform: scale(1);
+}
+
+.front-catch-section.effective.is-active p {
+	opacity: 1;
+	transform: translateY(0px);
+}
+
 @media screen and (min-width: 780px) {
 	.front-catch-section p {
 		text-align: center;
@@ -1012,6 +1105,48 @@ textarea {
 
 .front-goodpoint-columns .wp-block-image {
 	margin: .5em auto;
+}
+
+.front-goodpoint-columns.effective h3 {
+	opacity: 0;
+	transform: translateY(15px);
+	transition: opacity .5s, transform .5s;
+}
+
+.front-goodpoint-columns.effective h3::after {
+	transform: scale(0);
+	transition: transform .5s .9s;
+}
+
+.front-goodpoint-columns.effective p {
+	opacity: 0;
+	transform: translateY(15px);
+	transition: opacity .5s .3s, transform .5s .3s;
+}
+
+.front-goodpoint-columns.effective figure {
+	opacity: 0;
+	transform: translateY(15px);
+	transition: opacity .5s .6s, transform .5s .6s;
+}
+
+.front-goodpoint-columns.effective.is-active h3 {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.front-goodpoint-columns.effective.is-active h3::after {
+	transform: scale(1);
+}
+
+.front-goodpoint-columns.effective.is-active p {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.front-goodpoint-columns.effective.is-active figure {
+	opacity: 1;
+	transform: translateY(0);
 }
 
 @media screen and (min-width: 780px) {
@@ -1039,6 +1174,28 @@ textarea {
 
 .front-planprice-columns .wp-block-column:nth-of-type(3) {
 	border: 3px solid #fad163;
+}
+
+.front-planprice-columns .wp-block-column.effective {
+	opacity: 0;
+	transform: translateY(15px);
+}
+
+.front-planprice-columns .wp-block-column.effective:nth-of-type(1) {
+	transition: opacity .5s, transform .5s;
+}
+
+.front-planprice-columns .wp-block-column.effective:nth-of-type(2) {
+	transition: opacity .5s, transform .5s;
+}
+
+.front-planprice-columns .wp-block-column.effective:nth-of-type(3) {
+	transition: opacity .5s, transform .5s;
+}
+
+.front-planprice-columns .wp-block-column.effective.is-active {
+	opacity: 1;
+	transform: translateY(0);
 }
 
 .front-planprice-columns h3 {
@@ -1077,6 +1234,25 @@ textarea {
 	font-size: .9rem;
 }
 
+@media screen and (min-width: 780px) {
+	.front-planprice-columns {
+		justify-content: space-around;
+	}
+	.front-planprice-columns .wp-block-column.effective {
+		opacity: 0;
+		transform: translateY(15px);
+	}
+	.front-planprice-columns .wp-block-column.effective:nth-of-type(1) {
+		transition: opacity .5s, transform .5s;
+	}
+	.front-planprice-columns .wp-block-column.effective:nth-of-type(2) {
+		transition: opacity .5s .3s, transform .5s .3s;
+	}
+	.front-planprice-columns .wp-block-column.effective:nth-of-type(3) {
+		transition: opacity .5s .6s, transform .5s .6s;
+	}
+}
+
 .front-service-icons {
 	margin: 0 auto 1.8rem;
 	max-width: 960px;
@@ -1093,6 +1269,17 @@ textarea {
 
 .front-service-icons .wp-block-image figcaption {
 	margin: 0 0 0 1em;
+}
+
+.front-service-icons.effective {
+	opacity: 0;
+	transform: translateY(15px);
+	transition: opacity .6s, transform .6s;
+}
+
+.front-service-icons.effective.is-active {
+	opacity: 1;
+	transform: translateY(0);
 }
 
 .front-schedule-calendar iframe {
@@ -1118,6 +1305,17 @@ textarea {
 	background-color: #66cffe;
 }
 
+.front-schedule-blue.effective {
+	opacity: 0;
+	transform: translateY(15px);
+	transition: opacity .6s, transform .6s;
+}
+
+.front-schedule-blue.effective.is-active {
+	opacity: 1;
+	transform: translateY(0);
+}
+
 .front-schedule-orange {
 	position: relative;
 	padding-left: 2em;
@@ -1133,6 +1331,17 @@ textarea {
 	height: 1.4em;
 	border-radius: .2em;
 	background-color: #fad163;
+}
+
+.front-schedule-orange.effective {
+	opacity: 0;
+	transform: translateY(15px);
+	transition: opacity .6s, transform .6s;
+}
+
+.front-schedule-orange.effective.is-active {
+	opacity: 1;
+	transform: translateY(0);
 }
 
 .front-sponser-container {
@@ -1156,6 +1365,18 @@ textarea {
 	margin-bottom: 0;
 }
 
+.front-sponser-container.effective {
+	counter-increment: sponcount 1;
+	opacity: 0;
+	transform: translateY(15px);
+	transition: opacity .6s, transform .6s;
+}
+
+.front-sponser-container.effective.is-active {
+	opacity: 1;
+	transform: translateY(0);
+}
+
 @media screen and (min-width: 480px) {
 	.front-sponser-container .wp-block-group__inner-container .wp-block-image {
 		margin: 0 2rem 1.5rem;
@@ -1169,6 +1390,37 @@ textarea {
 .front-access-columns {
 	max-width: 960px;
 	margin: 0 auto 1.5rem;
+}
+
+.front-access-columns.effective h3 {
+	opacity: 0;
+	transform: translateY(15px);
+	transition: opacity .5s, transform .5s;
+}
+
+.front-access-columns.effective h3::after {
+	transform: scale(0);
+	transition: transform .5s .6s;
+}
+
+.front-access-columns.effective p {
+	opacity: 0;
+	transform: translateY(15px);
+	transition: opacity .5s .3s, transform .5s .3s;
+}
+
+.front-access-columns.effective.is-active h3 {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.front-access-columns.effective.is-active h3::after {
+	transform: scale(1);
+}
+
+.front-access-columns.effective.is-active p {
+	opacity: 1;
+	transform: translateY(0);
 }
 
 /* Comments

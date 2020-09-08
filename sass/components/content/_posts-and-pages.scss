@@ -27,16 +27,66 @@
 .pair-h2 {
   h2 {
     margin: 2em auto .4em;
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      bottom: -.25em;
+      right: 0;
+      left: 0;
+      height: 3px;
+      width: 60%;
+      max-width: 300px;
+      margin: auto;
+      background-color: $color__site-main;
+    }
   }
   p {
     text-align: center;
     font-size: 1.25rem;
     margin-bottom: 2.4em;
   }
+  &.effective {
+    h2 {
+      transform: scaleX(0);
+      transition: transform .3s;
+      &::after {
+        transform: scaleX(0);
+        transform-origin: left center;
+        transition: transform .6s .4s;
+      }
+    }
+    p {
+      transform: scaleX(0);
+      transition: transform .3s .3s;
+    }
+    &.is-active {
+      h2 {
+        transform: scaleX(1);
+        &::after {
+          transform: scaleX(1);
+        }  
+      }
+      p {
+        transform: scaleX(1);
+      }
+    }
+  }
 }
 
 .small-text {
   font-size: .9rem;
+
+  &.effective {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity .6s, transform .6s;
+
+    &.is-active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 .line-button {
@@ -62,4 +112,13 @@
       }
     }
   }
+
+  &.effective {
+    transform: scale(0);
+    transition: transform 1s;
+    &.is-active {
+      transform: scaleY(1);
+    }
+  }
 }
+
