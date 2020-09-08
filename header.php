@@ -46,6 +46,7 @@
         <?php endif; ?>
       </div><!-- .site-branding -->
 
+      <?php /*
       <nav id="site-navigation" class="main-navigation">
         <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="menu-toggle__line"></span></button>
         <?php
@@ -57,5 +58,6 @@
         );
         ?>
       </nav><!-- #site-navigation -->
+      */ ?>
     </div>
 	</header><!-- #masthead -->
