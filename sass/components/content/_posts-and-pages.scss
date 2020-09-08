@@ -24,10 +24,15 @@
 	margin: 0 0 1.5em;
 }
 
-.sub-title {
-  text-align: center;
-  font-size: 1.25rem;
-  margin-bottom: 2.4em;
+.pair-h2 {
+  h2 {
+    margin: 2em auto .4em;
+  }
+  p {
+    text-align: center;
+    font-size: 1.25rem;
+    margin-bottom: 2.4em;
+  }
 }
 
 .small-text {
