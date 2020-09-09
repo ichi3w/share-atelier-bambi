@@ -293,11 +293,11 @@
 }
 
 .front-schedule-blue {
-  @include front-schedule-info($color__site-sub-blue);
-  margin-top: 3em;
+  @include front-schedule-info(#1B887A);
 }
 .front-schedule-orange {
-  @include front-schedule-info($color__site-sub-orange);
+  margin-top: 3em;
+  @include front-schedule-info(#8C500B);
 }
 
 .front-sponser-container {

@@ -1291,7 +1291,6 @@ textarea {
 .front-schedule-blue {
 	position: relative;
 	padding-left: 2em;
-	margin-top: 3em;
 }
 
 .front-schedule-blue::before {
@@ -1303,7 +1302,7 @@ textarea {
 	width: 1.4em;
 	height: 1.4em;
 	border-radius: .2em;
-	background-color: #66cffe;
+	background-color: #1B887A;
 }
 
 .front-schedule-blue.effective {
@@ -1318,6 +1317,7 @@ textarea {
 }
 
 .front-schedule-orange {
+	margin-top: 3em;
 	position: relative;
 	padding-left: 2em;
 }
@@ -1331,7 +1331,7 @@ textarea {
 	width: 1.4em;
 	height: 1.4em;
 	border-radius: .2em;
-	background-color: #fad163;
+	background-color: #8C500B;
 }
 
 .front-schedule-orange.effective {
