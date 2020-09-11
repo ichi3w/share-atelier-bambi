@@ -107,7 +107,8 @@
       transition: color .3s .1s, background-color .3s;
       color: $color__text-reverse;
       background-color: #00B900;
-      &:hover {
+      &:hover,
+      &:active {
         color: $color__text-main;
         background-color: transparent;
       }
@@ -116,10 +117,9 @@
 
   &.effective {
     transform: scale(0);
-    transition: transform .3s;
+    transition: transform .6s;
     &.is-active {
       transform: scaleY(1);
     }
   }
 }
-
