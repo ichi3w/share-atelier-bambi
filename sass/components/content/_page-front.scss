@@ -37,9 +37,25 @@
 .front-catch-section {
   margin: 3rem auto;
   h2 {
-    margin: .5em auto;
+    position: relative;
+    margin: .5em auto 1em;
     &::after {
-      content: none;
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: -2;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      width: 20rem;
+      max-width: none;
+      height: 14rem;
+      background-image: url(./images/drow-paint.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      background-position: center;
     }
   }
   p {
@@ -52,23 +68,39 @@
       transform: scale(0);
       transition: transform .3s;
     }
+    h2 {
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        width: 20.1rem;
+        height: 14.1rem;
+        background-color: $color__background-body;
+        transform: scaleX(1);
+        transform-origin: bottom right;
+        transition: transform 1.2s .3s;
+      }
+    }
     p {
       opacity: 0;
       transform: translateY(15px);
-      &:nth-of-type(1) {
-        transition: opacity .3s .3s, transform .3s .3s;
-      }
-      &:nth-of-type(2) {
-        transition: opacity .3s .6s, transform .3s .6s;
-      }
-      &:nth-of-type(3) {
-        transition: opacity .3s .9s, transform .3s .9s;
-      }
+      transition: opacity .3s .9s, transform .3s .9s;
     }
 
     &.is-active {
       .wp-block-column:first-child {
         transform: scale(1);
+      }
+      h2 {
+        &::before {
+          transform: scaleX(0);
+        }
       }
       p {
         opacity: 1;
@@ -80,8 +112,23 @@
 
 @include at-query-min($breakpoint__tab) {
   .front-catch-section {
+    h2 {
+      margin: .5em auto;
+    }
     p {
       text-align: center;
+    }
+    &.effective {
+      h2 {
+        &::before {
+          width: 23.1rem;
+          height: 16.1rem;
+        }
+        &::after {
+          width: 23rem;
+          height: 16rem;
+        }
+      }
     }
   }
 }

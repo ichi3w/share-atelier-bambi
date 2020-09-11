@@ -58,7 +58,7 @@
     }
     p {
       transform: scaleX(0);
-      transition: transform .3s .3s;
+      transition: transform .3s;
     }
     &.is-active {
       h2 {
