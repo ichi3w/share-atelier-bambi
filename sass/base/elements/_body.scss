@@ -1,3 +1,14 @@
+:root {
+  font-size: $font__main-size-sp;
+}
+
+@include at-query-min($breakpoint__tab){
+  :root {
+    font-size: $font__main-size-pc;
+  }
+}
+
 body {
+  font-size: 1rem;
 	background: $color__background-body; // Fallback for when there is no custom background color defined.
 }

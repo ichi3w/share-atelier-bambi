@@ -4,13 +4,13 @@ Theme URI: https://ichif.net/
 Author: Daichi Hirota
 Author URI: https://ichif.net/
 Description: Description
-Version: 1.0.0
+Version: 1.0.2
 Tested up to: 5.5
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: sab
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned.
@@ -46,7 +46,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Jetpack infinite scroll
 # Utilities
 	- Accessibility
-	- Alignments
+  - Alignments
+  - WP Blocks
 
 --------------------------------------------------------------*/
 
@@ -89,6 +90,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------- */
 @import "plugins/jetpack/infinite-scroll";
 
+/* Meta Slider
+--------------------------------------------- */
+@import "plugins/metaslider/meta-slider";
+
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
@@ -100,3 +105,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* Alignments
 --------------------------------------------- */
 @import "utilities/alignments";
+
+/* WordPress Blocks
+--------------------------------------------- */
+@import "utilities/wp-blocks";

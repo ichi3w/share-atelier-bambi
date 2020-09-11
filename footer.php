@@ -12,19 +12,17 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'sab' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'sab' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'sab' ), 'sab', '<a href="https://ichif.net">Daichi Hirota</a>' );
-				?>
-		</div><!-- .site-info -->
+    <a class="twitter-logo" href="https://twitter.com/Bambi_0827" target="_blank" rel="noopener noreferrer">
+      <img
+        loading="lazy"
+        width="32"
+        height="32"
+        src="<?php echo get_template_directory_uri(); ?>/images/twitter-logo.png"
+        alt="ツイッターへのリンク">
+    </a>
+    <p class="copyright">
+      ©︎ 2020 Share Atelier Bambi
+		</p>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

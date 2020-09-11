@@ -1,0 +1,27 @@
+<?php
+/**
+ * Template Name: FrontPageTemplate
+ * 
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package ShareAtelierBambi
+ */
+
+get_header();
+?>
+
+	<main id="primary" class="site-main">
+
+		<?php
+		while ( have_posts() ) :
+			the_post();
+
+			get_template_part( 'my-templates/template-parts/content', 'page-front' );
+
+		endwhile; // End of the loop.
+		?>
+
+	</main><!-- #main -->
+
+<?php
+get_footer();

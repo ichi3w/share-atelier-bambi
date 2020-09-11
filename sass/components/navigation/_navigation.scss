@@ -1,66 +1,31 @@
 .main-navigation {
+  position: absolute;
 	display: block;
-	width: 100%;
+  top: 0;
+  right: 8px;
+
+  .nav-menu {
+    position: relative;
+    top: 0;
+    right: 0;
+    padding: 16px 32px;
+    transform: translateY(-100%);
+    background-color: $color__background-header;
+    opacity: 0;
+  }
 
 	ul {
-		display: none;
 		list-style: none;
 		margin: 0;
-		padding-left: 0;
-
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 100%;
-			left: -999em;
-			z-index: 99999;
-
-			ul {
-				left: -999em;
-				top: 0;
-			}
-
-			li {
-
-				&:hover > ul,
-				&.focus > ul {
-					display: block;
-					left: auto;
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
-
-	li {
-		position: relative;
-
-		&:hover > a,
-		&.focus > a {
-		}
+		padding: 0;
 	}
 
 	a {
-		display: block;
+    display: block;
+    line-height: $font__line-height-body;
 		text-decoration: none;
-	}
+    color: $color__background-body;
+  }
 
 	.current_page_item > a,
 	.current-menu-item > a,
@@ -69,21 +34,70 @@
 	}
 }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
+.toggled.main-navigation {
+  .nav-menu {
+    opacity: 1;
+    transform: translateY($height__site-header);
+  }
 }
 
-@media screen and (min-width: 37.5em) {
+.menu-toggle {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  height: $height__site-header;
+  width: $height__site-header;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  &:active,
+  &:focus {
+    outline: none;
+  }
+  &::before,
+  &__line,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 12px;
+    margin: 0 auto;
+    background-color: $color__background-body;
+    width: 24px;
+    height: 2px;
+    border-radius: 1px;
+  }
+  &::before {
+    top: 15px;
+  }
+  &__line {
+    top: 23px;
+  }
+  &::after {
+    top: 31px
+  }
+}
 
-	.menu-toggle {
-		display: none;
-	}
-
-	.main-navigation ul {
-		display: flex;
-	}
+.toggled .menu-toggle {
+  &::before,
+  &__line,
+  &::after {
+    right: 10px;
+    width: 28px;
+  }
+  &::before {
+    top: 23px;
+    transform: rotateZ(45deg);
+  }
+  &__line {
+    opacity: 0;
+  }
+  &::after {
+    top: 23px;
+    transform: rotateZ(-45deg);
+  }
 }
 
 .comment-navigation,

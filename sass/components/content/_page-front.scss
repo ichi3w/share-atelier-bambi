@@ -1,0 +1,450 @@
+.home .site-main {
+  width: 100%;
+}
+
+.front-top {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 96px);
+  overflow: hidden;
+
+  .front-logo {
+    position: absolute;
+    display: block;
+    z-index: 90;
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 70%;
+    height: auto;
+    line-height: 200px;
+    margin: 0 auto;
+    transform: translateY(-50%);
+  }
+}
+
+@include at-query-min($breakpoint__tab) {
+  .front-top {
+    height: calc(100vh - 48px);;
+
+    .front-logo {
+      width: auto;
+      height: 55%;
+    }
+  }
+}
+
+.front-catch-section {
+  margin: 3rem auto;
+  h2 {
+    position: relative;
+    margin: .5em auto 1em;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: -2;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      width: 20rem;
+      max-width: none;
+      height: 14rem;
+      background-image: url(./images/drow-paint.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      background-position: center;
+    }
+  }
+  p {
+    line-height: 1.85;
+    text-align: center;
+  }
+  
+  &.effective {
+    .wp-block-column:first-child {
+      transform: scale(0);
+      transition: transform .3s;
+    }
+    h2 {
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        width: 20.1rem;
+        height: 14.1rem;
+        background-color: $color__background-body;
+        transform: scaleX(1);
+        transform-origin: bottom right;
+        transition: transform 1.2s .3s;
+      }
+    }
+    p {
+      opacity: 0;
+      transform: translateY(15px);
+      transition: opacity .3s .9s, transform .3s .9s;
+    }
+
+    &.is-active {
+      .wp-block-column:first-child {
+        transform: scale(1);
+      }
+      h2 {
+        &::before {
+          transform: scaleX(0);
+        }
+      }
+      p {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+  }
+}
+
+@include at-query-min($breakpoint__tab) {
+  .front-catch-section {
+    h2 {
+      margin: .5em auto;
+    }
+    p {
+      text-align: center;
+    }
+    &.effective {
+      h2 {
+        &::before {
+          width: 23.1rem;
+          height: 16.1rem;
+        }
+        &::after {
+          width: 23rem;
+          height: 16rem;
+        }
+      }
+    }
+  }
+}
+
+.front-goodpoint-columns {
+  margin: 0 auto 1rem;
+  .wp-block-image {
+    margin: .5em auto;
+  }
+
+  &.effective {
+    h3 {
+      opacity: 0;
+      transform: translateY(15px);
+      transition: opacity .3s .3s, transform .3s .3s;
+      &::after {
+        transform: scale(0);
+        transition: transform .6s .9s;
+      }
+    }
+    p {
+      opacity: 0;
+      transform: translateY(15px);
+      transition: opacity .3s .6s, transform .3s .6s;
+    }
+    figure {
+      opacity: 0;
+      transform: translateY(15px);
+      transition: opacity .3s, transform .3s;
+    }
+
+    &.is-active {
+      h3 {
+        opacity: 1;
+        transform: translateY(0);
+        &::after {
+          transform: scale(1);
+        }
+      }
+      p {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      figure {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+@include at-query-min($breakpoint__sp) {
+  .front-goodpoint-columns {
+    &.effective {
+      h3 {
+        transition: opacity .3s, transform .3s;
+        &::after {
+          transition: transform .6s .6s;
+        }
+      }
+      p {
+        transition: opacity .3s .3s, transform .3s .3s;
+      }
+      figure {
+        transition: opacity .3s .9s, transform .3s .9s;
+      }
+    }
+  }
+}
+
+@include at-query-min($breakpoint__tab) {
+  .front-goodpoint-columns {
+    margin-bottom: 1.5rem;
+    .wp-block-image {
+      margin: 1em 0;
+    }
+  }
+}
+
+.front-planprice-columns {
+  justify-content: space-around;
+
+  .wp-block-column {
+    margin-bottom: 1rem;
+    padding: 1rem 1.5rem 1.3rem;
+    border-radius: 1rem;
+
+    &:nth-of-type(1),
+    &:nth-of-type(2) {
+      border: 3px solid $color__site-sub-blue;
+    }
+    &:nth-of-type(3) {
+      border: 3px solid $color__site-sub-orange;
+    }
+
+    &.effective {
+      opacity: 0;
+      transform: translateY(15px);
+      &:nth-of-type(1) {
+        transition: opacity .3s, transform .3s;
+      }
+      &:nth-of-type(2) {
+        transition: opacity .3s, transform .3s;
+      }
+      &:nth-of-type(3) {
+        transition: opacity .3s, transform .3s;
+      }
+
+      &.is-active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+  }
+  h3 {
+    margin: 0;
+    text-align: center;
+    font-size: 2rem;
+  }
+  .front-planprice-time {
+    margin: 0;
+    text-align: center;
+    font-size: .9rem;
+  }
+  .front-planprice-price {
+    margin: 0;
+    text-align: center;
+    font-size: 2.2rem;
+    line-height: $font__line-height-heading;
+    span {
+      font-size: .6em;
+    }
+  }
+  p {
+    margin-bottom: 0;
+    span {
+      font-size: .9rem;
+    }
+  }
+  .front-planprice-option {
+    margin-bottom: 0;
+    font-size: .9rem;
+  }
+}
+
+@include at-query-min($breakpoint__tab) {
+  .front-planprice-columns {
+    justify-content: space-around;
+  
+    .wp-block-column {
+      &.effective {
+        opacity: 0;
+        transform: translateY(15px);
+        &:nth-of-type(1) {
+          transition: opacity .3s, transform .3s;
+        }
+        &:nth-of-type(2) {
+          transition: opacity .3s .3s, transform .3s .3s;
+        }
+        &:nth-of-type(3) {
+          transition: opacity .3s .6s, transform .3s .6s;
+        }
+      }
+    }
+  }
+}
+
+.front-service-icons {
+  margin: 0 auto 1.8rem;
+  max-width: $size__content-max;
+  .wp-block-image {
+    display: flex;
+    padding-left: 1.4rem;
+    align-items: center;
+    img {
+      display: block;
+    }
+    figcaption {
+      margin: 0 0 0 1em;
+    }
+  }
+
+  &.effective {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity .6s, transform .6s;
+
+    &.is-active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.front-schedule-calendar {
+  iframe {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@mixin front-schedule-info ($fsi_color) {
+  position: relative;
+  padding-left: 2em;
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: .3em;
+    left: 0;
+    width: 1.4em;
+    height: 1.4em;
+    border-radius: .2em;
+    background-color: $fsi_color;
+  }
+
+  &.effective {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity .6s, transform .6s;
+
+    &.is-active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.front-schedule-blue {
+  @include front-schedule-info(#1B887A);
+}
+.front-schedule-orange {
+  margin-top: 3em;
+  @include front-schedule-info(#8C500B);
+}
+
+.front-sponser-container {
+  margin: 0 auto;
+
+  .wp-block-group__inner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .wp-block-image {
+      margin: 0 .5rem 3rem;
+      flex-basis: 100%;
+      text-align: center;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.effective {
+    counter-increment: sponcount 1;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity .6s, transform .6s;
+
+    &.is-active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@include at-query-min($breakpoint__sp) {
+  .front-sponser-container {
+    .wp-block-group__inner-container {
+      .wp-block-image {
+        margin: 0 2rem 1.5rem;
+        flex-basis: auto;
+        &:last-child {
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+.front-access-columns {
+  max-width: $size__content-max;
+  margin: 0 auto 1.5rem;
+
+  &.effective {
+    h3 {
+      opacity: 0;
+      transform: translateY(15px);
+      transition: opacity .3s, transform .3s;
+      &::after {
+        transform: scale(0);
+        transition: transform .6s .6s;
+      }
+    }
+    p {
+      opacity: 0;
+      transform: translateY(15px);
+      transition: opacity .3s .3s, transform .3s .3s;
+    }
+
+    &.is-active {
+      h3 {
+        opacity: 1;
+        transform: translateY(0);
+        &::after {
+          transform: scale(1);
+        }
+      }
+      p {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}
+

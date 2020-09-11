@@ -9,3 +9,16 @@
 @mixin column-width($numberColumns: 3) {
 	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
+
+// Media Query
+@mixin at-query-min ($breakpoint: $breakpoint__tab) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin at-query-max ($breakpoint: $breakpoint__tab) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}

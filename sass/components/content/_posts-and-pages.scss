@@ -4,7 +4,7 @@
 
 .post,
 .page {
-	margin: 0 0 1.5em;
+	margin: 0;
 }
 
 .updated:not(.published) {
@@ -14,10 +14,112 @@
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+  max-width: $size__site-max;
+  margin: 1.5em auto 0;
+  padding: 0 1.4rem;
 }
 
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.pair-h2 {
+  h2 {
+    margin: 2em auto .4em;
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      bottom: -.25em;
+      right: 0;
+      left: 0;
+      height: 3px;
+      width: 60%;
+      max-width: 300px;
+      margin: auto;
+      background-color: $color__site-main;
+    }
+  }
+  p {
+    text-align: center;
+    font-size: 1.25rem;
+    margin-bottom: 2.4em;
+  }
+  &.effective {
+    h2 {
+      transform: scaleX(0);
+      transition: transform .3s;
+      &::after {
+        transform: scaleX(0);
+        transform-origin: left center;
+        transition: transform .6s .6s;
+      }
+    }
+    p {
+      transform: scaleX(0);
+      transition: transform .3s .3s;
+    }
+    &.is-active {
+      h2 {
+        transform: scaleX(1);
+        &::after {
+          transform: scaleX(1);
+        }  
+      }
+      p {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+.small-text {
+  font-size: .9rem;
+
+  &.effective {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity .3s, transform .3s;
+
+    &.is-active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.line-button {
+  margin-top: .8rem;
+  margin-bottom: .6rem;
+
+  &.wp-block-button {
+
+    .wp-block-button__link {
+      padding: 0 16px 0 48px;
+      line-height: 48px;
+      border: 2px solid #00B900;
+      border-radius: 24px;
+      background-repeat: no-repeat;
+      background-size: 32px;
+      background-position: left 8px center;
+      background-image: url(./images/line-icon-r.png);
+      transition: color .3s .1s, background-color .3s;
+      color: $color__text-reverse;
+      background-color: #00B900;
+      &:hover,
+      &:active {
+        color: $color__text-main;
+        background-color: transparent;
+      }
+    }
+  }
+
+  &.effective {
+    transform: scale(0);
+    transition: transform .6s;
+    &.is-active {
+      transform: scaleY(1);
+    }
+  }
 }

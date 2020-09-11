@@ -1,0 +1,21 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: $color__background-header;
+  &__inner {
+    position: relative;
+    margin: 0 auto;
+    max-width: $size__site-max;
+  }
+}
+
+.site-branding {
+  position: relative;
+  display: flex;
+  z-index: 500;
+  align-items: center;
+  padding-left: 16px;
+  height: $height__site-header;
+  z-index: 100;
+}

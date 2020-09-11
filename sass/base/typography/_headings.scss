@@ -4,5 +4,57 @@ h3,
 h4,
 h5,
 h6 {
-	clear: both;
+  clear: both;
+  line-height: $font__line-height-heading;
+}
+
+h2 {
+  position: relative;
+  margin: 2em auto 1.5em;
+  text-align: center;
+  font-size: 2.5rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -.25em;
+    right: 0;
+    left: 0;
+    height: 3px;
+    width: 60%;
+    max-width: 300px;
+    margin: auto;
+    background-color: $color__site-main;
+  }
+}
+
+@mixin splash-effect {
+  content: "";
+  position: absolute;
+  display: block;
+  z-index: -1;
+  top: -1em;
+  left: -.7em;
+  height: 3em;
+  width: 3.4em;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+  
+h3 {
+  position: relative;
+  font-size: 1.5rem;
+  &.splash-blue::after {
+    @include splash-effect;
+    background-image: url(./images/splash-blue.png);
+  }
+  &.splash-green::after {
+    @include splash-effect;
+    background-image: url(./images/splash-green.png);
+  }
+  &.splash-yellow::after {
+    @include splash-effect;
+    background-image: url(./images/splash-yellow.png);
+  }
 }
