@@ -5,7 +5,7 @@ Theme URI: https://ichif.net/
 Author: Daichi Hirota
 Author URI: https://ichif.net/
 Description: Description
-Version: 1.0.1
+Version: 1.0.2
 Tested up to: 5.5
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
@@ -940,7 +940,7 @@ textarea {
 .pair-h2.effective h2::after {
 	transform: scaleX(0);
 	transform-origin: left center;
-	transition: transform .6s .4s;
+	transition: transform .3s .6s;
 }
 
 .pair-h2.effective p {
@@ -1001,7 +1001,7 @@ textarea {
 
 .line-button.effective {
 	transform: scale(0);
-	transition: transform 1s;
+	transition: transform .3s;
 }
 
 .line-button.effective.is-active {
@@ -1064,7 +1064,7 @@ textarea {
 
 .front-catch-section.effective .wp-block-column:first-child {
 	transform: scale(0);
-	transition: transform .5s;
+	transition: transform .3s;
 }
 
 .front-catch-section.effective p {
@@ -1073,15 +1073,15 @@ textarea {
 }
 
 .front-catch-section.effective p:nth-of-type(1) {
-	transition: opacity .5s .5s, transform .5s .5s;
+	transition: opacity .3s .3s, transform .3s .3s;
 }
 
 .front-catch-section.effective p:nth-of-type(2) {
-	transition: opacity .5s .7s, transform .5s .7s;
+	transition: opacity .3s .7s, transform .3s .7s;
 }
 
 .front-catch-section.effective p:nth-of-type(3) {
-	transition: opacity .5s .9s, transform .5s .9s;
+	transition: opacity .3s .9s, transform .3s .9s;
 }
 
 .front-catch-section.effective.is-active .wp-block-column:first-child {
@@ -1110,24 +1110,24 @@ textarea {
 .front-goodpoint-columns.effective h3 {
 	opacity: 0;
 	transform: translateY(15px);
-	transition: opacity .5s, transform .5s;
+	transition: opacity .3s .3s, transform .3s .3s;
 }
 
 .front-goodpoint-columns.effective h3::after {
 	transform: scale(0);
-	transition: transform .5s .9s;
+	transition: transform .3s .9s;
 }
 
 .front-goodpoint-columns.effective p {
 	opacity: 0;
 	transform: translateY(15px);
-	transition: opacity .5s .3s, transform .5s .3s;
+	transition: opacity .3s .6s, transform .3s .6s;
 }
 
 .front-goodpoint-columns.effective figure {
 	opacity: 0;
 	transform: translateY(15px);
-	transition: opacity .5s .6s, transform .5s .6s;
+	transition: opacity .3s, transform .3s;
 }
 
 .front-goodpoint-columns.effective.is-active h3 {
@@ -1147,6 +1147,21 @@ textarea {
 .front-goodpoint-columns.effective.is-active figure {
 	opacity: 1;
 	transform: translateY(0);
+}
+
+@media screen and (min-width: 480px) {
+	.front-goodpoint-columns.effective h3 {
+		transition: opacity .3s, transform .3s;
+	}
+	.front-goodpoint-columns.effective h3::after {
+		transition: transform .3s .9s;
+	}
+	.front-goodpoint-columns.effective p {
+		transition: opacity .3s .3s, transform .3s .3s;
+	}
+	.front-goodpoint-columns.effective figure {
+		transition: opacity .3s .6s, transform .3s .6s;
+	}
 }
 
 @media screen and (min-width: 780px) {
@@ -1182,15 +1197,15 @@ textarea {
 }
 
 .front-planprice-columns .wp-block-column.effective:nth-of-type(1) {
-	transition: opacity .5s, transform .5s;
+	transition: opacity .3s, transform .3s;
 }
 
 .front-planprice-columns .wp-block-column.effective:nth-of-type(2) {
-	transition: opacity .5s, transform .5s;
+	transition: opacity .3s, transform .3s;
 }
 
 .front-planprice-columns .wp-block-column.effective:nth-of-type(3) {
-	transition: opacity .5s, transform .5s;
+	transition: opacity .3s, transform .3s;
 }
 
 .front-planprice-columns .wp-block-column.effective.is-active {
@@ -1243,13 +1258,13 @@ textarea {
 		transform: translateY(15px);
 	}
 	.front-planprice-columns .wp-block-column.effective:nth-of-type(1) {
-		transition: opacity .5s, transform .5s;
+		transition: opacity .3s, transform .3s;
 	}
 	.front-planprice-columns .wp-block-column.effective:nth-of-type(2) {
-		transition: opacity .5s .3s, transform .5s .3s;
+		transition: opacity .3s .3s, transform .3s .3s;
 	}
 	.front-planprice-columns .wp-block-column.effective:nth-of-type(3) {
-		transition: opacity .5s .6s, transform .5s .6s;
+		transition: opacity .3s .6s, transform .3s .6s;
 	}
 }
 
@@ -1396,18 +1411,18 @@ textarea {
 .front-access-columns.effective h3 {
 	opacity: 0;
 	transform: translateY(15px);
-	transition: opacity .5s, transform .5s;
+	transition: opacity .3s, transform .3s;
 }
 
 .front-access-columns.effective h3::after {
 	transform: scale(0);
-	transition: transform .5s .6s;
+	transition: transform .3s .6s;
 }
 
 .front-access-columns.effective p {
 	opacity: 0;
 	transform: translateY(15px);
-	transition: opacity .5s .3s, transform .5s .3s;
+	transition: opacity .3s .3s, transform .3s .3s;
 }
 
 .front-access-columns.effective.is-active h3 {

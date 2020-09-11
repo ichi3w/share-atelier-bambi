@@ -50,19 +50,19 @@
   &.effective {
     .wp-block-column:first-child {
       transform: scale(0);
-      transition: transform .5s;
+      transition: transform .3s;
     }
     p {
       opacity: 0;
       transform: translateY(15px);
       &:nth-of-type(1) {
-        transition: opacity .5s .5s, transform .5s .5s;
+        transition: opacity .3s .3s, transform .3s .3s;
       }
       &:nth-of-type(2) {
-        transition: opacity .5s .7s, transform .5s .7s;
+        transition: opacity .3s .7s, transform .3s .7s;
       }
       &:nth-of-type(3) {
-        transition: opacity .5s .9s, transform .5s .9s;
+        transition: opacity .3s .9s, transform .3s .9s;
       }
     }
 
@@ -96,21 +96,21 @@
     h3 {
       opacity: 0;
       transform: translateY(15px);
-      transition: opacity .5s, transform .5s;
+      transition: opacity .3s .3s, transform .3s .3s;
       &::after {
         transform: scale(0);
-        transition: transform .5s .9s;
+        transition: transform .3s .9s;
       }
     }
     p {
       opacity: 0;
       transform: translateY(15px);
-      transition: opacity .5s .3s, transform .5s .3s;
+      transition: opacity .3s .6s, transform .3s .6s;
     }
     figure {
       opacity: 0;
       transform: translateY(15px);
-      transition: opacity .5s .6s, transform .5s .6s;
+      transition: opacity .3s, transform .3s;
     }
 
     &.is-active {
@@ -133,13 +133,32 @@
   }
 }
 
+@include at-query-min($breakpoint__sp) {
+  .front-goodpoint-columns {
+    &.effective {
+      h3 {
+        transition: opacity .3s, transform .3s;
+        &::after {
+          transition: transform .3s .9s;
+        }
+      }
+      p {
+        transition: opacity .3s .3s, transform .3s .3s;
+      }
+      figure {
+        transition: opacity .3s .6s, transform .3s .6s;
+      }
+    }
+  }
+}
+
 @include at-query-min($breakpoint__tab) {
   .front-goodpoint-columns {
     margin-bottom: 1.5rem;
     .wp-block-image {
       margin: 1em 0;
     }
-  }  
+  }
 }
 
 .front-planprice-columns {
@@ -162,13 +181,13 @@
       opacity: 0;
       transform: translateY(15px);
       &:nth-of-type(1) {
-        transition: opacity .5s, transform .5s;
+        transition: opacity .3s, transform .3s;
       }
       &:nth-of-type(2) {
-        transition: opacity .5s, transform .5s;
+        transition: opacity .3s, transform .3s;
       }
       &:nth-of-type(3) {
-        transition: opacity .5s, transform .5s;
+        transition: opacity .3s, transform .3s;
       }
 
       &.is-active {
@@ -218,13 +237,13 @@
         opacity: 0;
         transform: translateY(15px);
         &:nth-of-type(1) {
-          transition: opacity .5s, transform .5s;
+          transition: opacity .3s, transform .3s;
         }
         &:nth-of-type(2) {
-          transition: opacity .5s .3s, transform .5s .3s;
+          transition: opacity .3s .3s, transform .3s .3s;
         }
         &:nth-of-type(3) {
-          transition: opacity .5s .6s, transform .5s .6s;
+          transition: opacity .3s .6s, transform .3s .6s;
         }
       }
     }
@@ -354,16 +373,16 @@
     h3 {
       opacity: 0;
       transform: translateY(15px);
-      transition: opacity .5s, transform .5s;
+      transition: opacity .3s, transform .3s;
       &::after {
         transform: scale(0);
-        transition: transform .5s .6s;
+        transition: transform .3s .6s;
       }
     }
     p {
       opacity: 0;
       transform: translateY(15px);
-      transition: opacity .5s .3s, transform .5s .3s;
+      transition: opacity .3s .3s, transform .3s .3s;
     }
 
     &.is-active {
