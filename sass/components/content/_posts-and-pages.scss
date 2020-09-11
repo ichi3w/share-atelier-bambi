@@ -53,12 +53,12 @@
       &::after {
         transform: scaleX(0);
         transform-origin: left center;
-        transition: transform .3s .6s;
+        transition: transform .6s .6s;
       }
     }
     p {
       transform: scaleX(0);
-      transition: transform .3s;
+      transition: transform .3s .3s;
     }
     &.is-active {
       h2 {

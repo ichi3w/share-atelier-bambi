@@ -146,13 +146,13 @@
       transition: opacity .3s .3s, transform .3s .3s;
       &::after {
         transform: scale(0);
-        transition: transform .3s .9s;
+        transition: transform .6s .6s;
       }
     }
     p {
       opacity: 0;
       transform: translateY(15px);
-      transition: opacity .3s .6s, transform .3s .6s;
+      transition: opacity .3s .3s, transform .3s .3s;
     }
     figure {
       opacity: 0;
@@ -186,14 +186,14 @@
       h3 {
         transition: opacity .3s, transform .3s;
         &::after {
-          transition: transform .3s .9s;
+          transition: transform .6s .6s;
         }
       }
       p {
-        transition: opacity .3s .3s, transform .3s .3s;
+        transition: opacity .3s, transform .3s;
       }
       figure {
-        transition: opacity .3s .6s, transform .3s .6s;
+        transition: opacity .3s .3s, transform .3s .3s;
       }
     }
   }
@@ -423,13 +423,13 @@
       transition: opacity .3s, transform .3s;
       &::after {
         transform: scale(0);
-        transition: transform .3s .6s;
+        transition: transform .6s .3s;
       }
     }
     p {
       opacity: 0;
       transform: translateY(15px);
-      transition: opacity .3s .3s, transform .3s .3s;
+      transition: opacity .3s, transform .3s;
     }
 
     &.is-active {

@@ -940,12 +940,12 @@ textarea {
 .pair-h2.effective h2::after {
 	transform: scaleX(0);
 	transform-origin: left center;
-	transition: transform .3s .6s;
+	transition: transform .6s .6s;
 }
 
 .pair-h2.effective p {
 	transform: scaleX(0);
-	transition: transform .3s;
+	transition: transform .3s .3s;
 }
 
 .pair-h2.effective.is-active h2 {
@@ -1153,13 +1153,13 @@ textarea {
 
 .front-goodpoint-columns.effective h3::after {
 	transform: scale(0);
-	transition: transform .3s .9s;
+	transition: transform .6s .6s;
 }
 
 .front-goodpoint-columns.effective p {
 	opacity: 0;
 	transform: translateY(15px);
-	transition: opacity .3s .6s, transform .3s .6s;
+	transition: opacity .3s .3s, transform .3s .3s;
 }
 
 .front-goodpoint-columns.effective figure {
@@ -1192,13 +1192,13 @@ textarea {
 		transition: opacity .3s, transform .3s;
 	}
 	.front-goodpoint-columns.effective h3::after {
-		transition: transform .3s .9s;
+		transition: transform .6s .6s;
 	}
 	.front-goodpoint-columns.effective p {
-		transition: opacity .3s .3s, transform .3s .3s;
+		transition: opacity .3s, transform .3s;
 	}
 	.front-goodpoint-columns.effective figure {
-		transition: opacity .3s .6s, transform .3s .6s;
+		transition: opacity .3s .3s, transform .3s .3s;
 	}
 }
 
@@ -1454,13 +1454,13 @@ textarea {
 
 .front-access-columns.effective h3::after {
 	transform: scale(0);
-	transition: transform .3s .6s;
+	transition: transform .6s .3s;
 }
 
 .front-access-columns.effective p {
 	opacity: 0;
 	transform: translateY(15px);
-	transition: opacity .3s .3s, transform .3s .3s;
+	transition: opacity .3s, transform .3s;
 }
 
 .front-access-columns.effective.is-active h3 {
