@@ -967,7 +967,7 @@ textarea {
 .small-text.effective {
 	opacity: 0;
 	transform: translateY(15px);
-	transition: opacity .6s, transform .6s;
+	transition: opacity .3s, transform .3s;
 }
 
 .small-text.effective.is-active {
@@ -1077,7 +1077,7 @@ textarea {
 }
 
 .front-catch-section.effective p:nth-of-type(2) {
-	transition: opacity .3s .7s, transform .3s .7s;
+	transition: opacity .3s .6s, transform .3s .6s;
 }
 
 .front-catch-section.effective p:nth-of-type(3) {

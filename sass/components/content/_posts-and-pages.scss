@@ -80,7 +80,7 @@
   &.effective {
     opacity: 0;
     transform: translateY(15px);
-    transition: opacity .6s, transform .6s;
+    transition: opacity .3s, transform .3s;
 
     &.is-active {
       opacity: 1;
