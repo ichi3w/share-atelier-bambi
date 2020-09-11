@@ -9,7 +9,7 @@
 
 if ( ! defined( 'SAB_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'SAB_VERSION', '1.0.0' );
+	define( 'SAB_VERSION', '1.0.3' );
 }
 
 if ( ! function_exists( 'sab_setup' ) ) :
@@ -161,13 +161,6 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
 
 /**
  * Load My gutenberg styles
