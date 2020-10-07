@@ -169,3 +169,8 @@ add_action( 'admin_init', 'enqueue_gutenberg_styles' );
 function enqueue_gutenberg_styles() {
   add_editor_style( 'style-gutenberg.css' );
 }
+
+/**
+ * 投稿編集リンクのURLを一律で表示しない
+ */
+add_filter( 'get_edit_post_link', '__return_false' );
